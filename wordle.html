@@ -9,10 +9,30 @@
   </head>
   <body>
     <h1 id="title">WORDLE</h1>
-    <hr />
     <br />
     <div id="gameboard"></div>
     <br />
     <h1 id="answer"></h1>
-  </body>
+       <!-- Correct Modal -->
+       <div class="correctModal" id="correctModal">
+        <div class="correctModal-header">
+            <div class="correctModal-title">You've Won!</div>
+        </div>
+        <div class="correctModal-body">You guessed the right word</div>
+        <div class="correctModal-answer" id='correctWord'></div>
+        <button data-close-button class="close-button">Play again</button>
+    </div>
+
+    <!-- Wrong Modal -->
+    <div class="wrongModal" id="wrongModal">
+        <div class="wrongModal-header">
+            <div class="wrongModal-title">Yikes!</div>
+        </div>
+        <div class="wrongModal-body">The correct answer is</div>
+        <div class="wrongModal-answer" id="correctWord2"></div>
+        <button data-close-button class="close-button">Play again</button>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
 </html>

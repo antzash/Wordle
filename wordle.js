@@ -66,8 +66,10 @@ function update() {
 
     if (correct === width) {
       gameOver = true;
-      document.getElementById("answer").innerText =
-        "\n\nCongrats, You got the right answer!";
+      const correctModal = document.getElementById("correctModal");
+      const correctWord = document.getElementById("correctWord");
+      correctWord.textContent = word;
+      correctModal.classList.add("active");
     }
   }
 }
@@ -93,6 +95,7 @@ document.addEventListener("keyup", (e) => {
         //Populate it with the letter that user has input
         currTile.innerText = e.code[3];
         // move on to the next letter/column
+        currTile.classList.add("show-letter");
         column += 1; //
       }
     }
@@ -116,7 +119,19 @@ document.addEventListener("keyup", (e) => {
   if (!gameOver && row === height) {
     // once you have used up all your guesses and game is not yet declared over
     gameOver = true; // gameOver is declared
-    document.getElementById("answer").innerText =
-      "oops, you got it wrong, the right word is \n\n" + word; // correct answer will be revealed below
+    const wrongModal = document.getElementById("wrongModal");
+    const correctWord = document.getElementById("correctWord2");
+    correctWord.textContent = word;
+    wrongModal.classList.add("active");
   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const closeButton = document.querySelectorAll(".close-button");
+
+  closeButton.forEach((button) => {
+    button.addEventListener("click", function () {
+      location.reload();
+    });
+  });
 });
