@@ -80,7 +80,7 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 200ms ease-in-out;
-  border: 1px solid black;
+  border: none;
   background-color: white;
   border-radius: 20px;
   z-index: 10;
@@ -139,7 +139,7 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%); /* Adjusted */
   transition: 200ms ease-in-out;
-  border: 1px solid black;
+  border: none;
   background-color: white;
   border-radius: 20px;
   z-index: 10;

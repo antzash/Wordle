@@ -49,7 +49,6 @@ function update() {
 
     // Check for Correct Letter and Correct Position
     if (word[c] == letter) {
-      //
       currTile.classList.add("correct");
       correct += 1;
     } // check for present letter wrong position
@@ -61,11 +60,12 @@ function update() {
     }
 
     if (correct === width) {
-      gameOver = true;
-      const correctModal = document.getElementById("correctModal");
-      const correctWord = document.getElementById("correctWord");
-      correctWord.textContent = word;
-      correctModal.classList.add("active");
+      // if all the letters in the column are correct
+      gameOver = true; // initiate gameOver
+      const correctModal = document.getElementById("correctModal"); // define variable correctModal
+      const correctWord = document.getElementById("correctWord"); // define variable correctWord
+      correctWord.textContent = word; // populate correctWord in modal to display the answer
+      correctModal.classList.add("active"); // add active to the correctModal HTML class to display on screen
     }
   }
 }
@@ -77,25 +77,6 @@ function update() {
 // e is the key event
 document.addEventListener("keyup", (e) => {
   if (gameOver) return;
-  if (e.code === "Enter") {
-    // check if all letters in the current row have been filled
-    let allFilled = true;
-    for (let c = 0; c < width; c++) {
-      let currTile = document.getElementById(
-        row.toString() + "-" + c.toString()
-      );
-      if (currTile.innerText === "") {
-        allFilled = false;
-        break;
-      }
-    }
-    if (allFilled) {
-      update();
-      row += 1;
-      column = 0;
-    }
-    return;
-  }
   //limit key usage to within A-Z i.e. avoid numbers and symbols
   if ("KeyA" <= e.code && e.code <= "KeyZ") {
     // define variable letter to identfy third index of keystroke e.g. A is [3] of 'KeyA'
@@ -126,9 +107,12 @@ document.addEventListener("keyup", (e) => {
     currTile.innerText = ""; // and make it blank
   } else if (e.code === "Enter") {
     // once all five letters have been input, user presses enter to submit answer
-    update(); // call an update function (defined above) to check for missing, correct and present tiles
-    row += 1; // move on to next row for next guess
-    column = 0; // start at column 0 i.e. first letter
+    const rowComplete = column === width;
+    if (rowComplete) {
+      update(); // call an update function (defined above) to check for missing, correct and present tiles
+      row += 1; // move on to next row for next guess
+      column = 0; // start at column 0 i.e. first letter
+    }
   }
 
   if (!gameOver && row === height) {

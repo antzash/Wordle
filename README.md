@@ -2,7 +2,7 @@
 
 Welcome to Wordle, this is my clone of the popular New York Times game of the same name.
 
-## Link to the game:
+## Link to the game: https://antzash.github.io/Wordle/
 
 ## Description
 
@@ -14,7 +14,7 @@ Wordle is a game where players try to guess a secret word within a limited numbe
 - Receive feedback on each guess:
 
   - Correct letters in the correct position are highlighted in GREEN
-  - Correct letters in the wrong position are indicated in Yellow
+  - Correct letters in the wrong position are indicated in YELLOW
   - Incorrect letters are highlighted in DARK GREY
 
 ![wordle image](image-3.png)
@@ -35,6 +35,7 @@ Wordle is a game where players try to guess a secret word within a limited numbe
 
 - Press keys to input your guess. Use the Backspace key to delete characters.
 - Press Enter to submit your guess and receive feedback.
+- Ensure all 5 letters have been used in each attempt before pressing Enter
 - The game ends after six attempts.
 
 ## Credits
@@ -61,4 +62,4 @@ Other references:
 
 Debugging
 
-- StackOverflow and ChatGPT
+- StackOverflow and ChatGPT/BlackBox AI
