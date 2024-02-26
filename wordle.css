@@ -6,6 +6,13 @@ body {
   flex-direction: column;
 }
 
+hr {
+  width: 50%;
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid white;
+}
+
 #title {
   color: white;
   font-size: 40px;
@@ -46,16 +53,19 @@ body {
 .correct {
   background-color: #5fb806;
   color: black;
+  animation: flip 0.5s ease forwards;
 }
 
 .present {
   background-color: #d19b12;
   color: black;
+  animation: flip 0.5s ease forwards;
 }
 
 .missing {
   background-color: #bc0202;
   color: black;
+  animation: flip 0.5s ease forwards;
 }
 
 /* Correct Modal CSS */
@@ -169,4 +179,75 @@ body {
   color: white;
   background-color: black;
   border-radius: 20px;
+}
+
+.keyboard-row {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.keyboard-tile {
+  /* box */
+  border: 1px solid lightgray;
+  width: 40px;
+  height: 40px;
+  margin: 1px;
+
+  /* Text */
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard-enter {
+  /* box */
+  border: 1px solid lightgray;
+  width: 76px;
+  height: 40px;
+  margin: 1px;
+
+  /* Text */
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#streak-container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: white;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 150px;
+  text-align: center;
+}
+
+#streak {
+  color: white;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+  }
+  45% {
+    transform: rotateX(90deg);
+  }
+  55% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
 }

@@ -5,25 +5,21 @@ let width = 5; // number of letters in a guess
 let row = 0; // attempt number
 let column = 0; // letter for that attempt
 let gameOver = false;
+let streak = 0; // score streak counter
 let words = [
-  "APPLE",
-  "SQUID",
-  "CRUSH",
-  "SNAKE",
-  "THORN",
-  "PLANE",
-  "PRICE",
-  "PRIME",
-  "GHOST",
-  "HORSE",
-  "NIGHT",
+  // im going to keep it to just four words for easier testing
+  "DARTH",
+  "VADER",
+  "DEATH",
+  "STARS",
 ]; // call a random word API? https://random-word-api.herokuapp.com/word?length=5
 
 let word = words[Math.floor(Math.random() * words.length)]; // choose a random word out of the array
+console.log(word); // for testing and presentation purposes
 
 //stretch goal idea; dont repeat the words and restart in a new array
 
-// 2. Define a startup function
+//Define a startup function
 
 window.onload = function () {
   startup();
@@ -43,7 +39,7 @@ function startup() {
   }
 }
 
-//3. Update Function to check for missing, present and correct letters
+//Update Function to check for missing, present and correct letters
 
 function update() {
   let correct = 0; // start with 0
@@ -74,7 +70,7 @@ function update() {
   }
 }
 
-// 4. Create Event Listener for Key Press.
+//Create Event Listener for Key Press.
 
 // you want the key to only register only when the user lifts finger up from key
 
