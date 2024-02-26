@@ -253,3 +253,18 @@ hr {
     transform: rotateX(0);
   }
 }
+
+#play {
+  width: 70px;
+  height: 30px;
+  background-color: black;
+  border-radius: 15px;
+  border: 0.5px solid white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}

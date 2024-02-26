@@ -125,6 +125,8 @@ document.addEventListener("keyup", (e) => {
   }
 });
 
+//Ensure play again button refreshes the game for a new attempt
+
 document.addEventListener("DOMContentLoaded", function () {
   const closeButton = document.querySelectorAll(".close-button");
 
@@ -132,5 +134,27 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function () {
       location.reload();
     });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Select the play button and the audio player
+  const playButton = document.getElementById("play");
+  const audioPlayer = document.getElementById("audioPlayer");
+
+  // Add event listener to the play button
+  playButton.addEventListener("click", () => {
+    // Check if the audio player is paused or ended
+    if (audioPlayer.paused || audioPlayer.ended) {
+      // Play the audio
+      audioPlayer.play();
+      // Change the button text to "Pause" to indicate music is playing
+      playButton.textContent = "Pause";
+    } else {
+      // Pause the audio
+      audioPlayer.pause();
+      // Change the button text to "Music" to indicate that the music can be played
+      playButton.textContent = "Music";
+    }
   });
 });
