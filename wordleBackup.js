@@ -77,25 +77,6 @@ function update() {
 // e is the key event
 document.addEventListener("keyup", (e) => {
   if (gameOver) return;
-  if (e.code === "Enter") {
-    // check if all letters in the current row have been filled
-    let allFilled = true;
-    for (let c = 0; c < width; c++) {
-      let currTile = document.getElementById(
-        row.toString() + "-" + c.toString()
-      );
-      if (currTile.innerText === "") {
-        allFilled = false;
-        break;
-      }
-    }
-    if (allFilled) {
-      update();
-      row += 1;
-      column = 0;
-    }
-    return;
-  }
   //limit key usage to within A-Z i.e. avoid numbers and symbols
   if ("KeyA" <= e.code && e.code <= "KeyZ") {
     // define variable letter to identfy third index of keystroke e.g. A is [3] of 'KeyA'

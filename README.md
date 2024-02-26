@@ -2,6 +2,8 @@
 
 Welcome to Wordle, this is my clone of the popular New York Times game of the same name.
 
+## Link to the game:
+
 ## Description
 
 Wordle is a game where players try to guess a secret word within a limited number of attempts. Each attempt is a guess of a five-letter word. The game provides feedback on each guess to help the player deduce the correct word.
@@ -12,10 +14,10 @@ Wordle is a game where players try to guess a secret word within a limited numbe
 - Receive feedback on each guess:
 
   - Correct letters in the correct position are highlighted in GREEN
-  - Correct letters in the wrong position are indicated in ORANGE
-  - Incorrect letters are highlighted in RED
+  - Correct letters in the wrong position are indicated in Yellow
+  - Incorrect letters are highlighted in DARK GREY
 
-  ![wordle-feedbackscreenshot](image.png)
+![wordle image](image-3.png)
 
 - Modals for winning and losing scenarios.
 
