@@ -7,7 +7,7 @@ let column = 0; // letter for that attempt
 let gameOver = false;
 let streak = 0; // score streak counter
 let words = [
-  // im going to keep it to just four words for easier testing
+  // im going to keep it to just four words for easier presentation
   "DARTH",
   "VADER",
   "DEATH",
