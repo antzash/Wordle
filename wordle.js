@@ -6,11 +6,29 @@ let row = 0; // attempt number
 let column = 0; // letter for that attempt
 let gameOver = false; // Variable to indicate end of game regardless of win/loss
 let words = [
-  // im going to keep it to just four words for easier presentation
-  "DARTH",
-  "VADER",
   "DEATH",
-  "STARS",
+  "CLAIM",
+  "START",
+  "FLAIL",
+  "SPARK",
+  "TAINT",
+  "ALONE",
+  "CRIME",
+  "FROZE",
+  "CHAIN",
+  "PRICE",
+  "DRONE",
+  "SHINE",
+  "PRONE",
+  "FAINT",
+  "SHEET",
+  "JOINT",
+  "KNEES",
+  "HOIST",
+  "MOIST",
+  "CHILL",
+  "CHAIR",
+  "ZEBRA",
 ]; // call a random word API? https://random-word-api.herokuapp.com/word?length=5
 
 let word = words[Math.floor(Math.random() * words.length)]; // choose a random word out of the array
