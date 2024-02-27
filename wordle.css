@@ -183,62 +183,6 @@ hr {
   border: none;
 }
 
-.keyboard-row {
-  width: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.keyboard-tile {
-  /* box */
-  border: 1px solid lightgray;
-  width: 40px;
-  height: 40px;
-  margin: 1px;
-
-  /* Text */
-  color: white;
-  font-size: 20px;
-  font-weight: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.keyboard-enter {
-  /* box */
-  border: 1px solid lightgray;
-  width: 76px;
-  height: 40px;
-  margin: 1px;
-
-  /* Text */
-  color: white;
-  font-size: 20px;
-  font-weight: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#streak-container {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
-  font-weight: normal;
-  color: white;
-  background-color: #333;
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 20px;
-  width: 150px;
-  text-align: center;
-}
-
-#streak {
-  color: white;
-}
-
 @keyframes flip {
   0% {
     transform: rotateX(0);
